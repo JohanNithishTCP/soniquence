@@ -2,10 +2,10 @@
 import React, { useState } from 'react';
 
 const bannerVideos = [
-    "https://cdn.clinicalvisuals.com/medical/gynhealth/gynecology.webm",
-    "https://cdn.clinicalvisuals.com/medical/gynhealth/obstetrics.webm",
-    "https://cdn.clinicalvisuals.com/medical/gynhealth/infertility.webm",
-    "https://cdn.clinicalvisuals.com/medical/gynhealth/breast_symptoms.webm",
+    "https://cdn.clinicalvisuals.com/medical/soniquence/landing_page/soniquence_20Sec_01.webm",
+    "https://cdn.clinicalvisuals.com/medical/soniquence/landing_page/soniquence_20Sec_02.webm",
+    "https://cdn.clinicalvisuals.com/medical/soniquence/landing_page/soniquence_20Sec_03.webm",
+    "https://cdn.clinicalvisuals.com/medical/soniquence/landing_page/soniquence_20Sec_04.webm",
 ];
 
 export default function Hero() {
@@ -29,15 +29,15 @@ export default function Hero() {
                     className="absolute inset-0 w-full h-full object-cover z-0"
                 ></video>
                 {/* Overlay for text readability */}
-                <div className="absolute inset-0 bg-black/40 z-10"></div>
-                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent z-10"></div>
+                {/* <div className="absolute inset-0 bg-black/40 z-10"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent z-10"></div> */}
             </div>
 
             <div className="relative z-10 text-center px-4 site-container">
                 <h1
-                    data-aos="fade-up"
-                    data-aos-delay="300"
-                    className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-semibold leading-relaxed tracking-wide"
+                    data-aos="fade-in"
+                    data-aos-delay="2500"
+                    className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-semibold leading-relaxed tracking-wide [text-shadow:8px_4px_7px_rgba(0,0,0,0.6)]"
                 >
                     Delivering Medical, Veterinary, and Dental Practices<br />
                     Industry-Leading SoniqFrequency Surgical Technology

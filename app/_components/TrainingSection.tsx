@@ -1,4 +1,16 @@
+"use client";
+
+import { useState } from "react";
+
+const videos = [
+    "https://cdn.clinicalvisuals.com/medical/soniquence/short_clips/soniquence_Short_01.webm",
+    "https://cdn.clinicalvisuals.com/medical/soniquence/short_clips/soniquence_Short_02.webm",
+    "https://cdn.clinicalvisuals.com/medical/soniquence/short_clips/soniquence_Short_03.webm",
+];
+
 export default function TrainingSection() {
+    const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+
     return (
         <section className="w-full py-16 md:py-24 bg-white overflow-hidden">
             <div className="site-container">
@@ -15,7 +27,14 @@ export default function TrainingSection() {
                         {/* Main Image */}
 
                         <div className="absolute left-12 top-10 right-0 bottom-0 bg-gray-100 rounded-4xl overflow-hidden z-10 shadow-2xl">
-                            <img src="/home/training.jpg" alt="Training" className="w-full h-full object-cover" />
+                            <video
+                                src={videos[currentVideoIndex]}
+                                autoPlay
+                                muted
+                                playsInline
+                                onEnded={() => setCurrentVideoIndex((prev) => (prev + 1) % videos.length)}
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                     </div>
 

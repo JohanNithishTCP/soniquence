@@ -52,13 +52,13 @@ export default function TestimonialSection() {
                 >
                     {testimonials.map((t, index) => (
                         <SwiperSlide key={index}>
-                            <div className="grid grid-cols-1 lg:lg:grid-cols-[55%_45%] gap-12 lg:gap-20 items-center">
+                            <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-12 lg:gap-20 items-center">
                                 {/* Left Text */}
-                                <div className="space-y-8 lg:pr-1">
+                                <div className="space-y-6 md:space-y-8 lg:pr-1">
                                     <h2 className="text-[1.8rem] md:text-[1.7rem] font-bold text-[#202020] leading-[1.3] tracking-tight">
-                                        What Our Customer Says about<br />Soniquence
+                                        What Our Customer Says about<br className="hidden sm:block" />Soniquence
                                     </h2>
-                                    <div className="text-[#555555] leading-relaxed text-[18px] max-w-[90%] min-h-[160px]">
+                                    <div className="text-[#555555] leading-relaxed text-[15px] md:text-[18px] max-w-full md:max-w-[90%] min-h-auto md:min-h-[160px]">
                                         <p>"{t.quote}"</p>
                                     </div>
                                     <div className="font-bold text-[#202020] text-lg">
@@ -66,7 +66,7 @@ export default function TestimonialSection() {
                                     </div>
 
                                     {/* Navigation Arrows */}
-                                    <div className="flex space-x-4 pt-4">
+                                    <div className="flex space-x-4 pt-2 md:pt-4">
                                         <button
                                             onClick={() => swiperRef.current?.slidePrev()}
                                             className="w-12 h-12 rounded-full brand-gradient hover:bg-[#7D00E6] flex items-center justify-center text-white transition-colors shadow-md active:scale-95"
@@ -83,19 +83,19 @@ export default function TestimonialSection() {
                                 </div>
 
                                 {/* Right Image Container */}
-                                <div className="relative w-auto h-[400px] md:h-[500px]">
+                                <div className="relative w-full h-[350px] md:w-auto md:h-[500px] mt-6 lg:mt-0 flex justify-center lg:justify-end">
                                     {/* Main Image */}
                                     <div className="absolute rounded-xl overflow-hidden flex flex-col justify-center items-center">
                                         <img
                                             src={t.image}
                                             alt={t.author}
-                                            className="w-auto h-[400px] md:h-[500px]"
+                                            className="w-auto h-[350px] md:h-[500px] object-cover"
                                         />
                                     </div>
 
 
                                     {/* Review Overlay Card */}
-                                    <div className="absolute bottom-10 left-[-20px] md:left-[-40px] bg-white rounded-2xl p-4 shadow-xl z-20 flex flex-col gap-2 scale-90 md:scale-100">
+                                    <div className="absolute -bottom-6 left-4 md:bottom-10 md:left-[-40px] bg-white rounded-2xl p-4 shadow-xl z-20 flex flex-col gap-2 scale-90 sm:scale-100 origin-bottom-left">
                                         <div className="flex items-center gap-4">
                                             <div className="flex -space-x-2">
                                                 <div className="w-8 h-8 rounded-full overflow-hidden bg-blue-200 border-2 border-white"><img src="/home/ts-1.png" alt="" /> </div>

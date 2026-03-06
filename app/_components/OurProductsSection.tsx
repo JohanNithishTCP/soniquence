@@ -40,7 +40,7 @@ export default function OurProductsSection() {
     ];
 
     const filteredProducts = products.filter((_, index) => {
-        if (activeTab === 'View All') return true;
+        if (activeTab === 'All Products') return true;
         if (activeTab === 'Products') return index < 2;
         if (activeTab === 'Accessories') return index >= 2;
         return true;
@@ -53,17 +53,17 @@ export default function OurProductsSection() {
                 {/* Header and Tabs */}
                 <div
                     data-aos="fade-up"
-                    className="flex flex-col md:flex-row justify-between items-end md:items-center mb-10 border-gray-200 w-full gap-4"
+                    className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 border-gray-200 w-full gap-6 md:gap-4"
                 >
                     <h2 className="text-[1.8rem] md:text-[2rem] font-bold text-[#333333]">
                         Our Products
                     </h2>
-                    <div className="flex space-x-6 text-[16px] font-bold">
+                    <div className="flex flex-wrap gap-y-3 gap-x-2 sm:gap-x-6 text-[14px] sm:text-[16px] font-bold">
                         {tabs.map((tab, index) => (
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
-                                className={`${index < tabs.length - 1 ? 'border-r-2 border-gray-200 pr-5' : ''} transition-colors relative pb-1 ${activeTab === tab ? 'text-[#B000F5]' : 'text-gray-400 hover:text-gray-600'}`}
+                                className={`${index < tabs.length - 1 ? 'border-r-2 border-gray-200 pr-2 sm:pr-5' : ''} transition-colors relative pb-1 ${activeTab === tab ? 'text-[#B000F5]' : 'text-gray-400 hover:text-gray-600'}`}
                             >
                                 {tab}
                             </button>
@@ -81,13 +81,13 @@ export default function OurProductsSection() {
                             className="bg-white rounded-3xl p-5 shadow-sm border border-gray-100 flex flex-col items-center group transition-all hover:shadow-md"
                         >
                             {/* Image Placeholder */}
-                            <div className="w-full min-h-90 bg-[#f4f4f4] rounded-xl mb-6 flex justify-center items-center p-4">
-                                <img src={`/home/${product.image}`} alt={product.title} />
+                            <div className="w-full min-h-[220px] bg-[#f4f4f4] rounded-xl mb-6 flex justify-center items-center p-4">
+                                <img src={`/home/${product.image}`} alt={product.title} className="max-h-[160px] object-contain" />
                             </div>
-                            <h3 className="text-[18px] font-medium text-center text-[#202020] mb-1 min-h-[44px] leading-snug px-2">
+                            <h3 className="text-[18px] font-medium text-center text-[#202020] mb-1 min-h-[50px] leading-snug px-2 grow">
                                 {product.title}
                             </h3>
-                            <button className="w-full py-3 rounded-full brand-gradient hover:bg-[#7D00E6] text-white font-bold text-[14px] transition-colors mt-auto shadow-sm">
+                            <button className="w-full py-3 mt-4 rounded-full brand-gradient hover:bg-[#7D00E6] text-white font-bold text-[14px] transition-colors shadow-sm">
                                 Get Quote
                             </button>
                         </div>
