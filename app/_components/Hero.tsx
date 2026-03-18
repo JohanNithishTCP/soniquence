@@ -33,7 +33,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent z-10"></div> */}
             </div>
 
-            <div className="relative z-10 text-center px-4 site-container">
+            <div className="relative z-10 text-left px-4 site-container">
                 <h1
                     data-aos="fade-in"
                     data-aos-delay="2500"
