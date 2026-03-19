@@ -2,10 +2,10 @@
 import React, { useState } from 'react';
 
 const bannerVideos = [
-    "https://cdn.clinicalvisuals.com/medical/soniquence/landing_page/soniquence_20Sec_01.webm",
-    "https://cdn.clinicalvisuals.com/medical/soniquence/landing_page/soniquence_20Sec_02.webm",
-    "https://cdn.clinicalvisuals.com/medical/soniquence/landing_page/soniquence_20Sec_03.webm",
-    "https://cdn.clinicalvisuals.com/medical/soniquence/landing_page/soniquence_20Sec_04.webm",
+    "https://cdn.clinicalvisuals.com/medical/soniquence/landing_page/sequence_1.webm",
+    "https://cdn.clinicalvisuals.com/medical/soniquence/landing_page/sequence_2.webm",
+    "https://cdn.clinicalvisuals.com/medical/soniquence/landing_page/sequence_3.webm",
+    "https://cdn.clinicalvisuals.com/medical/soniquence/landing_page/sequence_4.webm",
 ];
 
 export default function Hero() {
